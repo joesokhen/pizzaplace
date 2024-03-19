@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="AUST PIZZA"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="25dp"
+        android:textSize="35dp"
+        android:textColor="#4CAC50"/>
+        <!--android:layout_gravity="center" This will center the box containing
+         the textview but not the latter specifically(This case might only be
+         needed when we set the layout_width to match_parent instead of wrap_content -->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pizza_logo"/>
+        <!--image file name must be small letter cases -->
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/order_btn"
+        android:id="@+id/btnOrder"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
